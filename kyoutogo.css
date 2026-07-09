@@ -31,6 +31,10 @@ html, body {
 	font-size: 150%;
 	width: 50%;
 }
+.cancel-button {
+  font-size: 150%;
+  margin: 5px 5px 5px 0px;
+}
 .buttons{
 	width: 48%;
 	min-width: 100px;
