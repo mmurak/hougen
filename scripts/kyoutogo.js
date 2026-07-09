@@ -69,7 +69,7 @@ G.content.addEventListener('click', (evt) => {
 	const target = evt.target.closest('.item');
 	if (target) {
 		let indexKey = target.textContent;
-		const m = indexKey.match(/ -> (.+)$/);
+		const m = indexKey.match(/ ➡ (.+)$/);
 		if (m != null) indexKey = m[1];
 		window.open(`https://dl.ndl.go.jp/pid/12449295/1/${G.indexer[indexKey]}`, '検索結果');
 	}
@@ -85,13 +85,13 @@ function displayResult(extractedList) {
 				result += `<span class="item" style="color:black;">${item.entry}</span><br>`;
 				break;
 			case 'G' :
-				result += `<span class="item"><span style="color:purple;">${item.entry}</span> -&gt; ${item.ref}</span><br>`;
+				result += `<span class="item"><span style="color:purple;">${item.entry}</span> ➡ ${item.ref}</span><br>`;
 				break;
 			case 'M' :
-				result += `<span class="item"><span style="color:blue;">${item.entry}</span> -&gt; ${item.ref}</span><br>`;
+				result += `<span class="item"><span style="color:blue;">${item.entry}</span> ➡ ${item.ref}</span><br>`;
 				break;
 			case 'E' :
-				result += `<span class="item"><span style="color:olive;">${item.entry}</span> -&gt; ${item.ref}</span><br>`;
+				result += `<span class="item"><span style="color:olive;">${item.entry}</span> ➡ ${item.ref}</span><br>`;
 				break;
 			default:
 		}
