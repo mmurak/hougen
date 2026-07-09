@@ -19,7 +19,7 @@ html, body {
 
 .footer {
   flex-shrink: 0; /* 同上 */
-  background-color: light-gray;
+  background-color: lightGray;
 }
 .toc-field{
 	margin: 5px 5px 5px 0px;
