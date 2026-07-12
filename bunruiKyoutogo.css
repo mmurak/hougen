@@ -7,6 +7,8 @@ html, body {
   flex-direction: column;
   height: 100vh; /* 画面の高さいっぱいを確保 */
   padding: 0 0 0 5;
+  color: #333333;
+  background-color: #EAE5DA;
 }
 
 .header {
@@ -60,4 +62,7 @@ a {
 }
 .item {
 	cursor: pointer;
+}
+#DialogWindow{
+	background-color: #FBF8F3;
 }

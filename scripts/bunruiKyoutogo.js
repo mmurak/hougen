@@ -88,6 +88,7 @@ G.entryField.addEventListener("compositionupdate", (evt) => {
 	if (evt.data == '') {
 		return;
 	}
+	G.entryField.value = '';
 	searchEntry(evt.data);
 });
 
@@ -172,6 +173,10 @@ function tocChange(val) {
 			for (let item of furoku03) {
 				anchors += `<a href="javascript:jumpTo(${item[1]})">${item[0]}</a><br>`;
 			}
+		} else if (val == -999) {
+			for (let item of taiwarei) {
+				anchors += `<a href="javascript:jumpTo(${item[1]})">${item[0]}</a><br>`;
+			}
 		}
 		G.content.innerHTML = anchors;
 	} else {
@@ -212,7 +217,7 @@ function openDialog() {
 function closeDialog() {
 	G.dialogWindow.close();
 	G.content.innerHTML = '';
-	searchEntry(G.entryField.value);
+	if (G.entryField.value != '') searchEntry(G.entryField.value);
 	G.entryField.focus();
 }
 function saveDialog() {
