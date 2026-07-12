@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>東京堂出版『分類京都語辞典』検索</title>
+		<link rel="shortcut icon" href="redKiwiBird.png">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="./bunruiKyoutogo.css">
+	</head>
+	<body>
+		<div class="page">
+			<header class="header">
+				<h2>東京堂出版『分類京都語辞典』（1979）検索</h2>
+				<select class="toc-field" id="TOCSel" onchange="tocChange(this.value);"/>
+				</select>
+				<button class="button" onclick="javascript:openDialog();">filter settings</button>
+				<input type="text" id="EntryField" class="entry-field" placeholder="検索語はひらがなで入力" autocomplete="off"/>
+				<button class="button" onclick="javascript:clearEntryField();">Clear (Esc)</button>
+				<br/>
+			</header>
+			<div class="content" id="Content"></div>
+			<dialog id="DialogWindow">
+				<div id="DialogArea"></div>
+				<button id="save-btn" onclick="saveDialog()">ローカルストレージに保存しておく</button>
+				<button id="close-btn" onclick="closeDialog()">閉じる</button>
+			</dialog>
+			<footer class="footer">
+				使用するには国立国会図書館デジタルコレクションの<a href="https://www.ndl.go.jp/jp/use/digital_transmission/individuals_index.html">個人向けデジタル化資料送信サービス</a>に登録、ログインしておく必要があります。
+			</footer>
+		</div>
+		<script src="./assets/bunruiKyoutogoIndex.js"></script>
+		<script src="./scripts/Regulator2026.js"></script>
+		<script src="./scripts/bunruiKyoutogo.js"></script>
+	</body>
+</html>
+
